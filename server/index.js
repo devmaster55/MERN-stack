@@ -4,6 +4,8 @@ const cors = require("cors");
 const morgan = require('morgan');
 const app = express();
 
+const { registerRoutes } = require('./routes');
+
 app.use(cors());
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
@@ -19,6 +21,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(morgan('dev'));
+
+registerRoutes(app);
 
 // simple route
 app.get("/", (req, res) => {
