@@ -7,4 +7,6 @@
 2. Run the frontend and backend:
 
         yarn dev
+
+3. Save dummy data to DB by clicking "Insert dummy data"
         
