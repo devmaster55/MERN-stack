@@ -1,15 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import ProfileCard from '../components/ProfileCard';
 import AccountsDataService from '../services/AccountsService';
-const { users } = require('../dummy_data.json');
 
 const AccountsPage = () => {
+  const [accounts, setAccounts] = useState([]);
+
+  useEffect(() => {
+    retrieveAllAccounts();
+  }, []);
+
+  const retrieveAllAccounts = () => {
+    AccountsDataService.getAll()
+      .then(response => {
+        setAccounts(response.data);
+      })
+      .catch(e => {
+        console.log(e);
+      });
+  };
+
   return (
     <div class="container" >
       <div class="row">
         <div class="col-sm-9 row justify-content-around">
-          {users.map(item => <ProfileCard user={item}/>)}          
+          {accounts.map(item => <ProfileCard user={item}/>)}          
         </div>
         <div class="col-sm-3 border-left align-middle">
           {`Click the card to see the details.`}
