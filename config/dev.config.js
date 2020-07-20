@@ -1,6 +1,6 @@
 const config = {
     port: process.env.PORT || 8000,
-    database:
+    database_url:
       process.env.MONGO || "mongodb://localhost/landis",
   };
   
