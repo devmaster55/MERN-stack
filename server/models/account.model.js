@@ -8,11 +8,11 @@ module.exports = mongoose => {
       name_last: String,
       phone: Number,
       address: String,
+      picture: String,
       employer: String,
       comments: String,
       credit: Number,
       balance: Number,
-      published: Boolean
     },
     { timestamps: true }
   );
