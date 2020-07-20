@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import ProfileCard from '../components/ProfileCard';
-
+import AccountsDataService from '../services/AccountsService';
 const { users } = require('../dummy_data.json');
 
 const AccountsPage = () => {
