@@ -3,8 +3,6 @@ const accountsController = require('../controllers/accounts.controller');
 
 const router = Router();
 
-router.get('/checking', accountsController.checking);
-
 // Add a new account
 router.post("/accounts", accountsController.create);
 

@@ -1,12 +1,6 @@
 const db = require("../models");
 const Account = db.Account;
 
-const checking = async (req, res, next) => {
-  res.json({
-      "Tutorial": "Welcome to the Landis panel."
-  });
-};
-
 // Create and Save a new account
 const create = (req, res) => {
   const {
@@ -153,7 +147,6 @@ const deleteAll = (req, res) => {
 };
 
 module.exports = {
-  checking,
   create,
   findAll,
   findOne,
