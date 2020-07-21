@@ -4,8 +4,8 @@ const Account = db.Account;
 // Create and Save a new account
 const create = (req, res) => {
   const {
-    name_first,
-    name_last,
+    nameFirst,
+    nameLast,
     email,
     phone,
     address,
@@ -17,7 +17,7 @@ const create = (req, res) => {
   } = req.body;
 
   // Validate request
-  if (!name_first || !email || !phone) {
+  if (!nameFirst || !email || !phone) {
     res.status(400).send({ message: "Content can not be empty!" });
     return;
   }
@@ -25,8 +25,8 @@ const create = (req, res) => {
 
   // Create an account
   const account = new Account({
-    name_first,
-    name_last,
+    nameFirst,
+    nameLast,
     email,
     phone,
     address,

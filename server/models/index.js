@@ -5,7 +5,7 @@ mongoose.Promise = global.Promise;
 
 const db = {};
 db.mongoose = mongoose;
-db.url = config.database_url;
+db.url = config.databaseUrl;
 
 db.Account = require("./account.model.js")(mongoose);
 

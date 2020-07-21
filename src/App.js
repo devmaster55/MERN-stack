@@ -11,17 +11,17 @@ function App() {
     <Router>
       <div>
         <nav class="navbar navbar-expand navbar-dark bg-dark">
-          <a href="/show_accounts" class="navbar-brand">
+          <a href="/showAccounts" class="navbar-brand">
             Landis
           </a>
           <div class="navbar-nav mr-auto">
             <li class="nav-item">
-              <Link to={"/show_accounts"} class="nav-link">
+              <Link to={"/showAccounts"} class="nav-link">
                 Accounts
               </Link>
             </li>
             <li class="nav-item">
-              <Link to={"/analytical_overview"} class="nav-link">
+              <Link to={"/analyticalOverview"} class="nav-link">
                 Analytics
               </Link>
             </li>
@@ -30,8 +30,8 @@ function App() {
 
         <div class="container mt-3">
           <Switch>
-            <Route exact path={["/", "/show_accounts"]} component={AccountsPage} />
-            <Route exact path="/analytical_overview" component={AnalyticsPage} />
+            <Route exact path={["/", "/showAccounts"]} component={AccountsPage} />
+            <Route exact path="/analyticalOverview" component={AnalyticsPage} />
           </Switch>
         </div>
       </div>

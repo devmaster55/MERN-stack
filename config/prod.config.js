@@ -1,7 +1,7 @@
 const config = {
-    base_url: "https://landis.com/api/v1",
+    baseUrl: "https://landis.com/api/v1",
     port: process.env.PORT || 80,
-    database_url:
+    databaseUrl:
       "mongodb://username:password@db_id.mlab.com:13255/db_name",
   };
   

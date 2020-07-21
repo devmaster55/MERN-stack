@@ -4,8 +4,8 @@ module.exports = mongoose => {
   const schema = mongoose.Schema(
     {
       email: String,
-      name_first: String,
-      name_last: String,
+      nameFirst: String,
+      nameLast: String,
       phone: Number,
       address: String,
       picture: String,
