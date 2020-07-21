@@ -1,12 +1,23 @@
 ## Getting Started
 
-1. Install the dependencies:
+1. Install Node.js:
+
+        https://nodejs.org/en/download/
+
+2. Install the `yarn` package manager:
+
+        https://classic.yarnpkg.com/en/docs/install
+
+3. Install MongoDB database server and then run it:
+
+        https://docs.mongodb.com/manual/installation/
+
+4. Install the dependencies:
 
         yarn install
 
-2. Run the frontend and backend:
+5. Run the frontend and backend:
 
         yarn dev
 
-3. Save dummy data to DB by clicking "Insert dummy data"
-        
+6. Save dummy data to DB by clicking "Insert dummy data"
