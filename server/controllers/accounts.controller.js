@@ -4,8 +4,8 @@ const Account = db.Account;
 // Create and Save a new account
 const create = (req, res) => {
   const {
-    nameFirst,
-    nameLast,
+    name_first: nameFirst,
+    name_last: nameLast,
     email,
     phone,
     address,
