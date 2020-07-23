@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <div>
-        <nav className="navbar navbar-expand navbar-dark bg-dark">
+        <nav className="navbar navbar-expand navbar-dark bg-dark position-sticky fixed-top">
           <a href="/showAccounts" className="navbar-brand">
             Landis
           </a>

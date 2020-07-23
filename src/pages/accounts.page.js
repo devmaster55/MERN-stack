@@ -47,14 +47,17 @@ const AccountsPage = () => {
             </p>
           }          
         </div>
-        <div className="col-sm-3 border-left">
+        <div className="col-sm-3 card-in-details">
+          {accounts.length === 0 &&
           <button 
             className="btn btn-primary"
             onClick={() => saveDummyDataToDB()}
             disabled={accounts.length > 0}>
             {'Insert dummy data'}
-          </button>
-          <p>{`Click the card to see the details.`}</p>
+          </button>}
+          <div className="pl-3 border-left">
+            <p>{`Click the card to see the details.`}</p>
+          </div>          
         </div>
       </div>
     </div>
