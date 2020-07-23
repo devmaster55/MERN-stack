@@ -36,9 +36,9 @@ const AccountsPage = () => {
   }
 
   return (
-    <div class="container" >
-      <div class="row">
-        <div class="col-sm-9 row justify-content-around">
+    <div className="container">
+      <div className="row">
+        <div className="col-sm-9 row justify-content-around">
           {accounts.length > 0 ?
             accounts.map(item => <ProfileCard user={item}/>)
             :
@@ -47,9 +47,9 @@ const AccountsPage = () => {
             </p>
           }          
         </div>
-        <div class="col-sm-3 border-left">
+        <div className="col-sm-3 border-left">
           <button 
-            class="btn btn-primary"
+            className="btn btn-primary"
             onClick={() => saveDummyDataToDB()}
             disabled={accounts.length > 0}>
             {'Insert dummy data'}

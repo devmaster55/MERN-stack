@@ -10,25 +10,25 @@ function App() {
   return (
     <Router>
       <div>
-        <nav class="navbar navbar-expand navbar-dark bg-dark">
-          <a href="/showAccounts" class="navbar-brand">
+        <nav className="navbar navbar-expand navbar-dark bg-dark">
+          <a href="/showAccounts" className="navbar-brand">
             Landis
           </a>
-          <div class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <Link to={"/showAccounts"} class="nav-link">
+          <div className="navbar-nav mr-auto">
+            <li className="nav-item">
+              <Link to={"/showAccounts"} className="nav-link">
                 Accounts
               </Link>
             </li>
-            <li class="nav-item">
-              <Link to={"/analyticalOverview"} class="nav-link">
+            <li className="nav-item">
+              <Link to={"/analyticalOverview"} className="nav-link">
                 Analytics
               </Link>
             </li>
           </div>
         </nav>
 
-        <div class="container mt-3">
+        <div className="container mt-3">
           <Switch>
             <Route exact path={["/", "/showAccounts"]} component={AccountsPage} />
             <Route exact path="/analyticalOverview" component={AnalyticsPage} />
