@@ -40,7 +40,7 @@ const AccountsPage = () => {
       <div className="row">
         <div className="col-sm-9 row justify-content-around">
           {accounts.length > 0 ?
-            accounts.map(item => <ProfileCard user={item}/>)
+            accounts.map(item => <ProfileCard user={item} key={item.id}/>)
             :
             <p>
               {`No accounts`}
