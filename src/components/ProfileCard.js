@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 const MAXIMUM_BALANCE_VALUE = 20000
 const MAXIMUM_CREDIT_VALUE = 1000
 
-const ProfileCard = ({user}) => {
+const ProfileCard = ({user, onPress}) => {
   const [indicatorValue, setIndicatorValue] = useState(0)
 
   /**
@@ -30,7 +30,7 @@ const ProfileCard = ({user}) => {
   })
 
   return (    
-    <div className="card col-lg-4">
+    <div className="card btn col-lg-4" onClick={() => onPress({...user, indicatorValue })}>
       <img src={`${user.picture}`} className="card-img-top rounded-circle" alt={'Avatar'}/>
       <div className="progress mx-3 my-2">
         <div className="progress-bar" role="progressbar" style={{width: `${indicatorValue}%`}} aria-valuenow={indicatorValue} aria-valuemin="0" aria-valuemax="100">{`${indicatorValue}%`}</div>

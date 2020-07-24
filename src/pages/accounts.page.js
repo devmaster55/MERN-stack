@@ -7,6 +7,7 @@ const { users } = require('../dummyData.json');
 
 const AccountsPage = () => {
   const [accounts, setAccounts] = useState([]);
+  const [selectedItem, setSelectedItem] = useState(null)
 
   useEffect(() => {
     retrieveAllAccounts();
@@ -35,12 +36,17 @@ const AccountsPage = () => {
     });
   }
 
+  const handleClickCard = (item) => {
+    console.log('item', item)
+    setSelectedItem(item)
+  }
+
   return (
     <div className="container">
       <div className="row">
         <div className="col-sm-9 row justify-content-around">
           {accounts.length > 0 ?
-            accounts.map(item => <ProfileCard user={item} key={item.id}/>)
+            accounts.map(item => <ProfileCard user={item} key={item.id} onPress={handleClickCard}/>)
             :
             <p>
               {`No accounts`}
@@ -56,7 +62,23 @@ const AccountsPage = () => {
             {'Insert dummy data'}
           </button>}
           <div className="pl-3 border-left">
+            {selectedItem == null ?
             <p>{`Click the card to see the details.`}</p>
+            :
+            <div>
+              <img src={`${selectedItem.picture}`} className="card-img-top rounded-circle" alt={'Avatar'}/>
+              <div className="progress mx-3 my-2">
+                <div className="progress-bar" role="progressbar" style={{width: `${selectedItem.indicatorValue}%`}} aria-valuenow={selectedItem.indicatorValue} aria-valuemin="0" aria-valuemax="100">{`${selectedItem.indicatorValue}%`}</div>
+              </div>
+              <div className="card-body">
+                <h5 className="card-title">{`${selectedItem.nameFirst} ${selectedItem.nameLast}`}</h5>
+                <p className="card-text">{`${selectedItem.email}`}</p>
+                <p className="card-text">{`${selectedItem.phone}`}</p>
+                <p className="card-text">{`${selectedItem.address}`}</p>
+                <p className="card-text">{`${selectedItem.comments}`}</p>
+              </div>
+            </div>
+            }
           </div>          
         </div>
       </div>

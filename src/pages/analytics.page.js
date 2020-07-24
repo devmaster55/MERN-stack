@@ -203,7 +203,7 @@ const AnalyticsPage = () => {
     mapDataByState.forEach((value, key) => {
       temp_array_data.push(value)
     })
-    console.log('temp_array_data', temp_array_data)
+
     setArrayDataByState(temp_array_data)
   }
 
