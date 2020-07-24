@@ -15,7 +15,7 @@ const AccountsPage = () => {
   const retrieveAllAccounts = () => {
     AccountsDataService.getAll()
       .then(response => {
-        setAccounts(response.data);
+        setAccounts(response.data);        
       })
       .catch(e => {
         console.log(e);
