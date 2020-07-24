@@ -3,12 +3,8 @@ import CanvasJSReact from '../assets/canvasjs.react';
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
  
 class ScatterChart extends Component {
-  constructor(props) {		
-		super(props);
-  }
-
 	render() {
-    const data = this.props.data;
+    	const data = this.props.data;
 
 		const options = {
 			theme: "dark2",

@@ -8,7 +8,7 @@ const AnalyticsPage = () => {
 
   useEffect(() => {
     retrieveAllAccounts();
-  }, []);
+  });
 
   const retrieveAllAccounts = () => {
     AccountsDataService.getAll()
