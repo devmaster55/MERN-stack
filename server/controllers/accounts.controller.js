@@ -91,8 +91,13 @@ const update = (req, res) => {
   }
 
   const id = req.params.id;
+  
+  const {
+    name_first: nameFirst,
+    name_last: nameLast,
+  } = req.body;
 
-  Account.findByIdAndUpdate(id, req.body)
+  Account.findByIdAndUpdate(id, { ...req.body, nameFirst, nameLast })
     .then(data => {
       if (!data) {
         res.status(404).send({
